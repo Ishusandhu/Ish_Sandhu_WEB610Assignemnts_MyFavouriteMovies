@@ -1,2 +1,6 @@
-<div [innerHtml]="Movies.htmlOutput()">
+<div class="content-card">
+    <h2>{{content.title}}</h2>
+    <img *ngIf="content.imgUrl" src="{{content.imgUrl}}" alt="content.data">
+    <p *ngIf="content.type">{{content.type}}</p>
+    <p *ngIf="content.tags">{{content.tags}}</p>
 </div>

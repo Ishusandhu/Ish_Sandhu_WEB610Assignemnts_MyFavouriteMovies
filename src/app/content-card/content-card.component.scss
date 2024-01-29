@@ -1,4 +1,9 @@
-img{
-    height: auto;
-    width: 200px;
+.content-card{
+    border: 1px solid #000;
+    margin: 6px 0px;
+    padding: 2px 2px;
+    img{
+        height: 200px;
+        width: auto;
+    }
 }
