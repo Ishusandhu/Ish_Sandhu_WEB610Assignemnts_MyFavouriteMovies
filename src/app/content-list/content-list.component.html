@@ -1,0 +1,9 @@
+<input [(ngModel)]="title">
+<button (click)="filterData(title)">Search</button>
+<span>{{searchString}}</span>
+<div *ngFor="let data of indianMovies|sortType:'Drama'" [class.drama]="indianMovies|sortType">
+    <app-content-card [content]="data"></app-content-card>
+</div>
+<div *ngFor="let data of indianMovies|sortType:'Movie'"[class.movie]="indianMovies|sortType">
+    <app-content-card [content]="data"></app-content-card>
+</div>
