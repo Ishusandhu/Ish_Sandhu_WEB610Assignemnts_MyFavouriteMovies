@@ -1,2 +1,11 @@
-<div [innerHtml]="Movies.htmlOutput()">
+<div class="content-card">
+    <h2>{{content.title}}</h2>
+    <p *ngIf="content.type">{{content.type}}</p>
+    <p *ngIf="content.tags">{{content.tags}}</p>
+    <ng-container *ngIf="content.imgUrl; else elsee">
+        <img src="{{content.imgUrl}}" alt="{{content.title}}">
+    </ng-container>
+    <ng-template #elsee>
+        <img src="./../../assets/Images/img.jpg" alt="Placeholder Image">
+    </ng-template>
 </div>
